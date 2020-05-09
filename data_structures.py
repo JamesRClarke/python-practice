@@ -26,6 +26,25 @@
 #
 # fruits[0] = "Banana" # will not work as a Tupple is immutable
 
+## Generators
+# def func():
+#     counter = 0
+#     while counter < 5:
+#         yield counter
+#         counter += 1
+#
+# for x in func():
+#     print x
+#
+#
+# def even_numbers(x):
+#     for i in range(x):
+#         if i % 2 == 0:
+#             yield i
+#
+# print list(even_numbers(21))
+
+
 
 
 ## ARRAY / LISTS
@@ -86,12 +105,30 @@
 # list = [x ** 2 for x in range(10) if x**2 % 2 == 0 ] # [0, 4, 16, 36, 64]
 # print list
 
+# def add(x):
+#     return x + 2
+#
+# newlist = [10,20,30,40,50]
+#
+# result = list(map(add, newlist)) # [12, 22, 32, 42, 52]
+# print result
+#
+# lambdaresult = list(map(lambda x: x + 2, newlist)) # [12, 22, 32, 42, 52]
+# print lambdaresult
+
+# newlist = [1, 3, 4, 5, 7, 2, 9, 11, 13]
+#
+# result = list(filter(lambda x: x % 2 == 0, newlist))
+# print result
+
+
+
 
 ## Strings
 
 ## String formatting
 ## the .format function pass in the values you want to display inside a string
-# numbers = [8, 5, 2020]
+# numbers = [8,  5,  2020]
 # newstring = "Date: {0}/{1}/{2}".format(numbers[0], numbers[1], numbers[2])
 # print newstring
 #
@@ -99,21 +136,21 @@
 # print a
 
 ## .join is used to join items in a list
-print ', '.join(["Apple", "Banana", "Mango"]) # Apple, Banana, Mango
-
-## .replace is used to replace given input with second argument
-print 'Hello there'.replace("there", "James") # Hello James
-
-## .startswith & .endswith .lower - self-documenting
-newstring = "This is a string"
-print newstring.startswith("This") # True
-print newstring.endswith("string") # True
-print newstring.lower() # this is a string
-
-
-## Numbers
-print min(1,2,3,4,5) # 1
-print max(1,2,3,4,5) # 5
-
-## abs() always returns the absolute number i.e. always posotive
-print abs(-203) # 203
+# print ', '.join(["Apple", "Banana", "Mango"]) # Apple, Banana, Mango
+#
+# ## .replace is used to replace given input with second argument
+# print 'Hello there'.replace("there", "James") # Hello James
+#
+# ## .startswith & .endswith .lower - self-documenting
+# newstring = "This is a string"
+# print newstring.startswith("This") # True
+# print newstring.endswith("string") # True
+# print newstring.lower() # this is a string
+#
+#
+# ## Numbers
+# print min(1,2,3,4,5) # 1
+# print max(1,2,3,4,5) # 5
+#
+# ## abs() always returns the absolute number i.e. always posotive
+# print abs(-203) # 203
